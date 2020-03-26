@@ -67,6 +67,13 @@ function displayTarot() {
     });
 }
 
+<<<<<<< HEAD
 
 
 displayTarot();
+=======
+displayTarot();
+
+// name - meaning_up - meaining_down - desc 
+// 
+>>>>>>> 1e5ff5cdc3a544d8bd013fe82841131f9f1c872a
