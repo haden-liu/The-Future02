@@ -9,6 +9,7 @@ function displayTarot() {
         method: "GET"
     })
     .then(function(response) {
+        console.log(response);
         $(".tarot info").text(JSON.stringify(response));
     });
 }
