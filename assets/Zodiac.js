@@ -8,6 +8,7 @@
 // returns 
 var sunSigns = "https://zodiacal.herokuapp.com/api";
 console.log(sunSigns);
+
 // sunSigns length=12
     //0 Aries
     //1 Taurus
@@ -34,6 +35,7 @@ console.log(sunSigns);
 // sunSigns[1] famous_people:
 
 
+
 // retuns rising physical and mental traits
 var risingSigns = "https://zodiacal.herokuapp.com/rising";
 console.log(risingSigns);
@@ -54,6 +56,7 @@ function displayZodiac() {
     $.ajax({
         url: sunSigns,
         method: "GET"
+
     })
         .then(function(response) {
             console.log(response[0].rising_physical)
@@ -61,6 +64,7 @@ function displayZodiac() {
             console.log(response)
             
             
+
             var sunResults = response;
 
             for (var i = 0; i < sunResults.length; i++) {
@@ -70,5 +74,7 @@ function displayZodiac() {
 
             
         });
+
 };
 displayZodiac()  
+
