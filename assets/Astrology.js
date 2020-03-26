@@ -15,3 +15,6 @@ function displayTarot() {
 }
 
 displayTarot();
+
+// name - meaning_up - meaining_down - desc 
+// 

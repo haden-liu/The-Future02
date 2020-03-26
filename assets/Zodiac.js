@@ -8,6 +8,7 @@
 // returns 
 var sunSigns = "https://zodiacal.herokuapp.com/api";
 console.log(sunSigns);
+// Name of famous - 
 
 // retuns rising physical and mental traits
 var risingSigns = "https://zodiacal.herokuapp.com/rising";
@@ -29,10 +30,10 @@ function displayZodiac() {
     $.ajax({
         url: sunSigns,
         method: "GET"
-    })
-        .then(function(response) {
+    }).then(function(response) {
+            console.log(response[0].famous_people)
             console.log(response)
-            var sunResults = response.data;
+            var sunResults = response;
 
             for (var i = 0; i < sunResults.length; i++) {
                 var sunDiv = $("<div>");
@@ -40,4 +41,6 @@ function displayZodiac() {
 
             
         });
+
 };
+displayZodiac()
