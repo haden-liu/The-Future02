@@ -1,0 +1,19 @@
+
+
+/* Setting style for the header */
+header {
+    font-size: 30px;
+    font-weight: 200;
+    font-style: oblique;
+    font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    background-image: url(mystic.jpg);
+    border-image-width: 100%;
+}
+
+/* Setting style for the app buttons */
+.buttons {
+        text-align: center;
+}
+
+/* Setting style for the description */
