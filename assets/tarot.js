@@ -2,32 +2,32 @@ function displayTarot() {
 
     var queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=20";
 
-    console.log(queryURL);
-
     $.ajax({
         url: queryURL,
         method: "GET"
     })
     .then(function(response) {
         console.log(response);
-        $(".tarot info").text(JSON.stringify(response));
 
-        for (i = 0; i < response.length; i++) {
-            
-            var tarotInfor = $(".tarot info");
+        for (i = 0; i < response.cards.length; i++) {
+        
+            var tarotInfor = $(".tarot-info");
 
-            var nameResponse = response[i].name;
+            var nameResponse = response.cards[i].name;
             var name = $("<div>").text ("The name is: " + nameResponse);
             tarotInfor.append(name);
 
-            var valueResponse = response[i].value;
+            var valueResponse = response.cards[i].value;
             var value = $("<div>").text ("The value is: " + valueResponse);
             tarotInfor.append(value);
 
-            var meaningUpResponse = response[i].meaning_up;
+            var meaningUpResponse = response.cards[i].meaning_up;
             var value = $("<div>").text ("The meaning_up is: " + meaningUpResponse);
             tarotInfor.append(value);
 
+            var meaningRevResponse = response.cards[i].meaning_rev;
+            var value = $("<div>").text ("The meaning_rev is: " + meaningRevResponse);
+            tarotInfor.append(value);
         }
 
     });
