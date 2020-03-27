@@ -17,3 +17,7 @@ header {
 }
 
 /* Setting style for the description */
+.description {
+    text-align: center;
+    text-emphasis: none;
+}
