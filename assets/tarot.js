@@ -18,7 +18,7 @@ function displayTarot() {
 
             // the name is the name of each card which is being created inside of a div
             var nameResponse = response.cards[i].name;
-            var name = $("<div>").text ("Card Name " + nameResponse);
+            var name = $("<div>").text ("Card Name: " + nameResponse);
             tarotInfor.append(name);
 
             // the value is the value of each card which is being created inside of a div
