@@ -2,6 +2,8 @@
 
 .container-fluid {
     width: 1280px;
+    background-color: blanchedalmond;
+    
 }
 
 /* Setting style for the header */
@@ -9,6 +11,7 @@ header {
     font-size: 30px;
     font-weight: 200;
     font-style: oblique;
+    color: greenyellow;
     font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     background-image: url(mystic.jpg);
@@ -24,11 +27,15 @@ header {
 .description {
     text-align: center;
     text-emphasis: none;
-    
+    background-color: rgb(59, 150, 150);
+    color: blanchedalmond;
 }
 
 /* Setting stle for the Tarot card container */
-
+.astrology-section {
+    text-align: center;
+    /*background-image: url(creepy.jpg);*/
+}
 
 
 /* Setting style for the Astrology App */
@@ -37,3 +44,6 @@ header {
 }
 
 /* Setting style for the Western Horoscope  */
+.western-section {
+    text-align: center;
+}
