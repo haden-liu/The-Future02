@@ -1,3 +1,7 @@
+$(".tarotBtn").on("click", function(){
+    displayTarot()
+});
+
 function displayTarot() {
 
     // var numberOfCards = "";
@@ -55,7 +59,7 @@ function displayTarot() {
     });
 }
 
-displayTarot();
+
         
         //samples structure of json format
         
