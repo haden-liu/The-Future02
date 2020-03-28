@@ -120,9 +120,12 @@ function displaySun() {
         console.log(response[0].famous_people)
         console.log(response)
 
-        for (var i = 0; i < response.sunResults.length; i++) {
-            var sunDiv = $("<div>");
-            $(sunResults).append(sunDiv)
+        for (var i = 0; i < response.length; i++) {
+            var westernHoroscope = $(".western-Horoscope");
+
+            var sunResponse = response[i].name;
+            var sunName = $("<div>").text("Sign Name:" + sunResponse)
+            $(sunResponse).append(sunName)
         }
 
         
