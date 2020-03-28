@@ -8,9 +8,10 @@
 
 /* Setting style for the header */
 header {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 200;
     font-style: oblique;
+    letter-spacing: 10px;
     color: greenyellow;
     font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
@@ -47,3 +48,4 @@ header {
 .western-section {
     text-align: center;
 }
+
