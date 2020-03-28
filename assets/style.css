@@ -1,4 +1,8 @@
+/* Setting container style-size */
 
+.container-fluid {
+    width: 1280px;
+}
 
 /* Setting style for the header */
 header {
@@ -20,4 +24,16 @@ header {
 .description {
     text-align: center;
     text-emphasis: none;
+    
 }
+
+/* Setting stle for the Tarot card container */
+
+
+
+/* Setting style for the Astrology App */
+.astrology-section {
+    text-align: center;
+}
+
+/* Setting style for the Western Horoscope  */
