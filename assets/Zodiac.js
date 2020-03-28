@@ -109,6 +109,10 @@ var apis = {
     cardinity: "https://zodiacal.herokuapp.com/cardinalities",
 }
 
+$(".westernBtn").on("click", function(){
+    displaySun()
+});
+
 // function for sunSigns
 function displaySun() {
     $.ajax({
@@ -132,7 +136,7 @@ function displaySun() {
     });
 
 };
-displaySun()  
+ 
 
 // function for risingSigns
 function displayRising() {
@@ -155,7 +159,7 @@ function displayRising() {
     });
 
 };
-displayRising()  
+//displayRising()  
 
 // function for moonSigns
 function displayMoon() {
@@ -178,7 +182,7 @@ function displayMoon() {
     });
 
 };
-displayMoon()  
+//displayMoon()  
 
 // function for elements
 function displayElements() {
@@ -201,7 +205,7 @@ function displayElements() {
     });
 
 };
-displayElements()  
+//displayElements()  
 
 // function for cardinity
 function displayCardinity() {
@@ -224,7 +228,7 @@ function displayCardinity() {
     });
 
 };
-displayCardinity()  
+//displayCardinity()  
 
 //         // the name is the name of each card which is being created inside of a div
 //         var nameResponse = response.cards[i].name;

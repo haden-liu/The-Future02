@@ -1,3 +1,7 @@
+$(".tarotBtn").on("click", function(){
+    displayTarot()
+});
+
 function displayTarot() {
 
     // var numberOfCards = "";
@@ -26,6 +30,7 @@ function displayTarot() {
             // var value = $("<div>").text ("The value is: " + valueResponse);
             // tarotInfor.append(value);
 
+            
 
             //  create random gen of [0, 1] up or reverse 
 
@@ -54,7 +59,7 @@ function displayTarot() {
     });
 }
 
-displayTarot();
+
         
         //samples structure of json format
         
