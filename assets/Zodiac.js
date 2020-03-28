@@ -109,9 +109,10 @@ var apis = {
     cardinity: "https://zodiacal.herokuapp.com/cardinalities",
 }
 
-function displayZodiac() {
+// function for sunSigns
+function displaySun() {
     $.ajax({
-        url: sunSigns,
+        url: apis.sunSigns,
         method: "GET"
     })
     .then(function(response) {
@@ -128,57 +129,106 @@ function displayZodiac() {
     });
 
 };
-displayZodiac()  
+displaySun()  
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-})
-.then(function(response) {
-    console.log(response);
+// function for risingSigns
+function displayRising() {
+    $.ajax({
+        url: apis.risingSigns,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+        console.log(response[0].rising_physical)
+        console.log(response[0].famous_people)
+        console.log(response)
 
-    for (i = 0; i < response.cards.length; i++) {
-    
-        // the whole information on tarot
-        var tarotInfor = $(".tarot-info");
-
-        // the name is the name of each card which is being created inside of a div
-        var nameResponse = response.cards[i].name;
-        var name = $("<div>").text ("Card Name " + nameResponse);
-        tarotInfor.append(name);
-
-        // the value is the value of each card which is being created inside of a div
-        // var valueResponse = response.cards[i].value;
-        // var value = $("<div>").text ("The value is: " + valueResponse);
-        // tarotInfor.append(value);
-
-
-        //  create random gen of [0, 1] up or reverse 
-
-        var zeroOrOne = Math.round(Math.random())
-
-        if (zeroOrOne === 0) {
-            // the meaningUpResponse is the meaning of each facing up card which is then being created inside of a div
-            var meaningUpResponse = response.cards[i].meaning_up;
-            var value = $("<div>").text ("Card Explanation: " + meaningUpResponse);
-            tarotInfor.append(value);
-        } else {
-            // the meaningRevResponse is the meaning of each facing rev card which is then being created inside of a div
-            var meaningRevResponse = response.cards[i].meaning_rev;
-            var value = $("<div>").text ("Card Explanation: " + meaningRevResponse);
-            tarotInfor.append(value);
-    
+        for (var i = 0; i < response.sunResults.length; i++) {
+            var sunDiv = $("<div>");
+            $(sunResults).append(sunDiv)
         }
 
-        var nameDescription = response.cards[i].desc;
-        var value = $("<div>").text ("Card Description: " + nameDescription);
-        tarotInfor.append(value);
+        
+    });
 
+};
+displayRising()  
 
-    }
+// function for moonSigns
+function displayMoon() {
+    $.ajax({
+        url: apis.moonSigns,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+        console.log(response[0].rising_physical)
+        console.log(response[0].famous_people)
+        console.log(response)
 
-});
-}
+        for (var i = 0; i < response.sunResults.length; i++) {
+            var sunDiv = $("<div>");
+            $(sunResults).append(sunDiv)
+        }
 
-displayTarot();
+        
+    });
 
+};
+displayMoon()  
+
+// function for elements
+function displayElements() {
+    $.ajax({
+        url: apis.elements,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+        console.log(response[0].rising_physical)
+        console.log(response[0].famous_people)
+        console.log(response)
+
+        for (var i = 0; i < response.sunResults.length; i++) {
+            var sunDiv = $("<div>");
+            $(sunResults).append(sunDiv)
+        }
+
+        
+    });
+
+};
+displayElements()  
+
+// function for cardinity
+function displayCardinity() {
+    $.ajax({
+        url: apis.cardinity,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+        console.log(response[0].rising_physical)
+        console.log(response[0].famous_people)
+        console.log(response)
+
+        for (var i = 0; i < response.sunResults.length; i++) {
+            var sunDiv = $("<div>");
+            $(sunResults).append(sunDiv)
+        }
+
+        
+    });
+
+};
+displayCardinity()  
+
+//         // the name is the name of each card which is being created inside of a div
+//         var nameResponse = response.cards[i].name;
+//         var name = $("<div>").text ("Card Name " + nameResponse);
+//         tarotInfor.append(name);
+
+//         // the value is the value of each card which is being created inside of a div
+//         // var valueResponse = response.cards[i].value;
+//         // var value = $("<div>").text ("The value is: " + valueResponse);
+//         // tarotInfor.append(value);
