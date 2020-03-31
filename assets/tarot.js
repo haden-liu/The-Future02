@@ -6,56 +6,54 @@ function displayTarot() {
 
     // var numberOfCards = "";
     // var queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=" + numberOfCards;
-    var queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=3";
+    let queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=3";
 
     $.ajax({
         url: queryURL,
         method: "GET"
     })
     .then(function(response) {
-        //console.log(response);
+        console.log(response);
 
         for (i = 0; i < response.cards.length; i++) {
-        
             // the whole information on tarot
-            var tarotInfor = $(".tarot-info");
-
+            let tarotInfor = [];
             // the name is the name of each card which is being created inside of a div
-            var nameResponse = response.cards[i].name;
-            var name = $("<div>").text ("Card Name: " + nameResponse);
-            tarotInfor.append(name);
-
+            let nameResponse = response.cards[i].name;
+            let nameDescription = response.cards[i].desc;
+            let zeroOrOne = Math.round(Math.random())
+            let meaningResponse;
+            if (zeroOrOne === 0) {
+                // the meaningUpResponse is the meaning of each facing up card which is then being created inside of a div
+                meaningResponse = response.cards[i].meaning_up;
+            } else {
+                // the meaningRevResponse is the meaning of each facing rev card which is then being created inside of a div
+                meaningResponse = response.cards[i].meaning_rev;
+            };
+            // Creating the Dom elements
+            let cardRow = $("<div class='row'>");
+            // Card Name 
+            let cardTitle = $("<h3>Name Card</h3>");
+            let cardName = $("<div class='cardName'>").text(nameResponse);
+            let cardElements = $("<div class='col-sm-4'>").append(cardTitle).append(cardName);
+            $(cardRow).append(cardElements);
+            // Description
+            let cardDescription = $("<div class='cardDescription'>").text( nameDescription); 
+            let cardDescDesc = $("<div class='col-sm-4'>").append(cardDescription);
+            $(cardRow).append(cardDescDesc);     
+            // card info
+            let cardInfo = $("<div class='cardInfo'>").text(meaningResponse);
+            let cardElInfo = $("<div class='col-sm-4'>").append(cardInfo);
+            $(cardRow).append(cardElInfo);
+            $(".tarot-info").append(cardRow);
+        }
+    });
+}
             // the value is the value of each card which is being created inside of a div
             // var valueResponse = response.cards[i].value;
             // var value = $("<div>").text ("The value is: " + valueResponse);
             // tarotInfor.append(value);
             //  create random gen of [0, 1] up or reverse 
-
-            var zeroOrOne = Math.round(Math.random())
-
-            if (zeroOrOne === 0) {
-                // the meaningUpResponse is the meaning of each facing up card which is then being created inside of a div
-                var meaningUpResponse = response.cards[i].meaning_up;
-                var value = $("<div>").text ("Card Explanation: " + meaningUpResponse);
-                tarotInfor.append(value);
-            } else {
-                // the meaningRevResponse is the meaning of each facing rev card which is then being created inside of a div
-                var meaningRevResponse = response.cards[i].meaning_rev;
-                var value = $("<div>").text ("Card Explanation: " + meaningRevResponse);
-                tarotInfor.append(value);
-        
-            }
-
-            var nameDescription = response.cards[i].desc;
-            var value = $("<div>").text ("Card Description: " + nameDescription);
-            tarotInfor.append(value);
-
-    
-        }
-
-    });
-}
-      
         //samples structure of json format
         
         //"cards"[0]: {
