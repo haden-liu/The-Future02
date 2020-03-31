@@ -23,23 +23,23 @@ function displaySun() {
         method: "GET"
     })
     .then(function(response) {
-        //console.log(response[0].rising_physical)
-        //console.log(response[0].famous_people)
-        //console.log(response)
+        // console.log(response[0].rising_physical)
+        // console.log(response[0].famous_people)
+        // console.log(response)
 
         for (let i = 0; i < response.length; i++) {
             let westernHoroscope = $(".western-Horoscope");
 
-            let sunResponse = response[i].name;
-            let sunName = $("<div>").text("Sign Name:" + sunResponse)
-            $(westernHoroscope).append(sunName)
+            let sunResponse = response[i].famous_people;
+            let sunName = $("<div>").text("Sign Name:" + sunResponse);
+            westernHoroscope.append(sunName);
         }
 
         
     });
 
 };
- 
+displaySun()  
 
 // function for risingSigns
 function displayRising() {
@@ -62,7 +62,7 @@ function displayRising() {
     });
 
 };
-displayRising()  
+// displayRising()  
 
 // function for moonSigns
 function displayMoon() {
