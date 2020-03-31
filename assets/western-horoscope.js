@@ -23,9 +23,9 @@ function displaySun() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response[0].rising_physical)
-        console.log(response[0].famous_people)
-        console.log(response)
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
 
         for (let i = 0; i < response.length; i++) {
             let westernHoroscope = $(".western-Horoscope");
@@ -49,9 +49,9 @@ function displayRising() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response[0].rising_physical)
-        console.log(response[0].famous_people)
-        console.log(response)
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
 
         for (let i = 0; i < response.sunResults.length; i++) {
             let sunDiv = $("<div>");
@@ -72,9 +72,9 @@ function displayMoon() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response[0].rising_physical)
-        console.log(response[0].famous_people)
-        console.log(response)
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
 
         for (let i = 0; i < response.sunResults.length; i++) {
             let sunDiv = $("<div>");
@@ -95,9 +95,9 @@ function displayElements() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response[0].rising_physical)
-        console.log(response[0].famous_people)
-        console.log(response)
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
 
         for (let i = 0; i < response.sunResults.length; i++) {
             let sunDiv = $("<div>");
@@ -118,9 +118,9 @@ function displayCardinity() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response[0].rising_physical)
-        console.log(response[0].famous_people)
-        console.log(response)
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
 
         for (let i = 0; i < response.sunResults.length; i++) {
             let sunDiv = $("<div>");
