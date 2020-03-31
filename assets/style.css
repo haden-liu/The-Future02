@@ -1,17 +1,25 @@
 /* Setting container style-size */
 
 .container-fluid {
-    width: 1280px;
-    background-color: blanchedalmond; 
+    width: 1280px;  
 }
 
+.container {
+    background-color:#232429;
+    
+}
+
+body {
+    background-color:#232429;
+}
 /* Setting style for the header */
 header {
     font-size: 45px;
     font-weight: 200;
     font-style: oblique;
     letter-spacing: 10px;
-    color: greenyellow;
+    color:rgb(16, 34, 34);
+    text-shadow: 3px 3px aquamarine;
     font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     background-image: url(mystic.jpg);
@@ -21,22 +29,36 @@ header {
 /* Setting style for the app buttons */
 .buttons {
         text-align: center;
+        margin: 7px;
 }
 
 /* Setting style for the description */
 .description {
     text-align: center;
     text-emphasis: none;
-    background-color: rgb(59, 150, 150);
+    background-color:#1e310a;
     color: blanchedalmond;
 }
 
 /* Setting stle for the Tarot card container */
-.tarot-section h2{
+
+.tarot-info h3{
     text-align: center;
-    /*background-image: url(creepy.jpg);*/
+    
 }
 
+.tarot-row {
+    border: 20px;
+    border-color:#d8279e;
+    background-color: grey;
+    border-style: groove;
+    margin: 5px;
+    color: antiquewhite;
+}
+
+.cardName {
+    text-align: center;
+}
 
 /* Setting style for the Astrology App */
 .astrology-section {

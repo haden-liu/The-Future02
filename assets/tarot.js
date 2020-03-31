@@ -1,4 +1,5 @@
 $(".tarotBtn").on("click", function(){
+    event.preventDefault();
     displayTarot()
 });
 
@@ -13,7 +14,7 @@ function displayTarot() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response);
+        //console.log(response);
 
         for (i = 0; i < response.cards.length; i++) {
             // the whole information on tarot
@@ -31,11 +32,11 @@ function displayTarot() {
                 meaningResponse = response.cards[i].meaning_rev;
             };
             // Creating the Dom elements
-            let cardRow = $("<div class='row'>");
+            let cardRow = $("<div class='row tarot-row'>");
             // Card Name 
-            let cardTitle = $("<h3>Name Card</h3>");
+            //let cardTitle = $("<h3></h3>");.append(cardTitle)
             let cardName = $("<div class='cardName'>").text(nameResponse);
-            let cardElements = $("<div class='col-sm-4'>").append(cardTitle).append(cardName);
+            let cardElements = $("<div class='col-sm-4'>").append(cardName);
             $(cardRow).append(cardElements);
             // Description
             let cardDescription = $("<div class='cardDescription'>").text( nameDescription); 
