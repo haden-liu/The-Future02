@@ -13,7 +13,7 @@ function displayTarot() {
         method: "GET"
     })
     .then(function(response) {
-        console.log(response);
+        //console.log(response);
 
         for (i = 0; i < response.cards.length; i++) {
         
@@ -29,9 +29,6 @@ function displayTarot() {
             // var valueResponse = response.cards[i].value;
             // var value = $("<div>").text ("The value is: " + valueResponse);
             // tarotInfor.append(value);
-
-            
-
             //  create random gen of [0, 1] up or reverse 
 
             var zeroOrOne = Math.round(Math.random())
@@ -58,9 +55,7 @@ function displayTarot() {
 
     });
 }
-
-
-        
+      
         //samples structure of json format
         
         //"cards"[0]: {

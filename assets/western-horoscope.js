@@ -89,7 +89,19 @@ function displaySun() {
             let sunElements = $("<div>").text("Elements: " + sunElementsResponse);
             westernHoroscope.append(sunElements);
 
-        }
+// function for moonSigns
+function displayMoon() {
+    $.ajax({
+        url: apis.moonSigns,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+        //console.log(response[0].rising_physical)
+        //console.log(response[0].famous_people)
+        //console.log(response)
+
+        
 
         
     });
@@ -101,7 +113,6 @@ function displaySun() {
 // function displayRising() {
 //     $.ajax({
 //         url: apis.risingSigns,
-        
 //         method: "GET"
 //     })
 //     .then(function(response) {
@@ -113,6 +124,7 @@ function displaySun() {
 //             let sunDiv = $("<div>");
 //             $(sunResults).append(sunDiv)
 //         }
+
 
         
 //     });
@@ -147,7 +159,6 @@ function displaySun() {
 // function displayElements() {
 //     $.ajax({
 //         url: apis.elements,
-        
 //         method: "GET"
 //     })
 //     .then(function(response) {
@@ -158,11 +169,8 @@ function displaySun() {
 //         for (let i = 0; i < response.sunResults.length; i++) {
 //             let sunDiv = $("<div>");
 //             $(sunResults).append(sunDiv)
-//         }
-
-        
+//         }     
 //     });
-
 // };
 // //displayElements()  
 
@@ -182,10 +190,7 @@ function displaySun() {
 //             let sunDiv = $("<div>");
 //             $(sunResults).append(sunDiv)
 //         }
-
-        
 //     });
-
 // };
 // //displayCardinity()  
 
@@ -291,9 +296,8 @@ function displaySun() {
 // // console.log(cardinity);
 
 // // properties example:
-// /*
+
 // "_id": "5974383e734d1d6202a9080e",
 // "description": [],
 // "cardinality_contents": [],
-// "cardinality_name": "Cardinal"
-// */
+// "cardinality_name": "Cardinal",

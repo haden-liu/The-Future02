@@ -32,7 +32,7 @@ header {
 }
 
 /* Setting stle for the Tarot card container */
-.astrology-section {
+.tarot-section h2{
     text-align: center;
     /*background-image: url(creepy.jpg);*/
 }
