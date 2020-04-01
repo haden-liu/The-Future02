@@ -42,6 +42,7 @@ function displayTarot() {
             // card info
             let cardInfo = $("<div class='cardInfo'>").text(meaningResponse);
             let cardElInfo = $("<div class='col-sm-4'>").append(cardInfo);
+            // Append all elements into cardrow then into the html element
             $(cardRow).append(cardElInfo);
             $(".tarot-info").append(cardRow);
         }

@@ -9,7 +9,7 @@ const apis = {
 
 }
 
-$(".westernBtn").on("click", function(){
+$(".horoscopeBtn").on("click", function(){
     event.preventDefault();
     displaySun();
 });
@@ -21,74 +21,82 @@ function displaySun() {
         method: "GET"
     })
     .then(function(response) {
-
+        
         for (i = 0; i < response.length; i++) {
-            // the whole information on western horoscope
-            let westernHoroscope = $(".western-Horoscope");
-
-            // names of sun signs
+          
+            // declaration of variables
             let sunNameResponse = response[i].name;
-
-            let sunName = $("<div>").text("Sign Name: " + sunNameResponse);
-            westernHoroscope.append(sunName);
-
-            // name of famous people
             let sunFameResponse = response[i].famous_people;
-
-            let sunFame = $("<div>").text("Famouse People: " + sunFameResponse);
-            westernHoroscope.append(sunFame);
-
-            // bad_traits
             let sunBadTraitsResponse = response[i].bad_traits;
-
-            let sunBadTraits = $("<div>").text("Bad Traits: " + sunBadTraitsResponse);
-            westernHoroscope.append(sunBadTraits);
-
-            // good_traits
             let sunGoodTraitsResponse = response[i].good_traits;
-
-            let sunGoodTraits = $("<div>").text("Good Traits: " + sunGoodTraitsResponse);
-            westernHoroscope.append(sunGoodTraits);
-
-            // mental_traits
-            let sunMentalTraitsResponse = response[i].mental_traits;
-
-            let sunMentalTraits = $("<div>").text("Mental Traits: " + sunMentalTraitsResponse);
-            westernHoroscope.append(sunMentalTraits);
-
-            // physical_traits
             let sunPhysicalTraitsResponse = response[i].physical_traits;
-
-            let sunPhysicalTraits = $("<div>").text("Physical Traits: " + sunPhysicalTraitsResponse);
-            westernHoroscope.append(sunPhysicalTraits);
-
-            // keywords
             let sunKeywordsResponse = response[i].keywords;
-
-            let sunKeywords = $("<div>").text("Keywords: " + sunKeywordsResponse);
-            westernHoroscope.append(sunKeywords);
-
-            // cardinality
+            let sunSunDatesResponse = response[i].sun_dates;
+            let sunElementsResponse = response[i].element;
+            let sunMentalTraitsResponse = response[i].mental_traits;
             let sunCardinalityResponse = response[i].cardinality;
 
-            let sunCardinality = $("<div>").text("Cardinality: " + sunCardinalityResponse);
-            westernHoroscope.append(sunCardinality);
+            //console.log(sunNameResponse)
+            // render on DOM
+            let sunRow = $("<div class='row horoscope-row'>");
 
+            let sunName = $("<div class='sunName '>").text(sunNameResponse);
+            let sunElement = $("<div class='col-sm-2'>").append(sunName);
+            $(sunRow).append(sunElement);
+            $(".horoscope-info").append(sunRow);
+            // good_traits
+            let sunGoodTraits = $("<div class='sunGoodTraits'>").text("Good Traits: " + sunGoodTraitsResponse);
+            let sunElement1 = $("<div class='col-sm-2'>").append(sunGoodTraits);
+            $(sunRow).append(sunElement1);
+            $(".horoscope-info").append(sunRow);
+            // bad_traits
+            let sunBadTraits = $("<div class='sunBadTraits'>").text("Bad Traits: " + sunBadTraitsResponse);
+            let sunElement2 = $("<div class='col-sm-2'>").append(sunBadTraits);
+            $(sunRow).append(sunElement2);
+            $(".horoscope-info").append(sunRow);
+
+            // mental_traits
+            let sunMentalTraits = $("<div class='sunMentalTraits'>").text("Mental Traits: " + sunMentalTraitsResponse);
+            let sunElement3 = $("<div class='col-sm-2'>").append(sunMentalTraits);
+            $(sunRow).append(sunElement3);
+            $(".horoscope-info").append(sunRow);  
+            // physical_traits
+            let sunPhysicalTraits = $("<div class='sunPhysicalTraits'>").text("Physical Traits: " + sunPhysicalTraitsResponse);
+            let sunElement4 = $("<div class='col-sm-2'>").append(sunPhysicalTraits);
+            $(sunRow).append(sunElement4);
+            $(".horoscope-info").append(sunRow); 
+            //.append(sunPhysicalTraits);
+            // keywords
+            let sunKeywords = $("<div class='sunKeyword'>").text("Keywords: " + sunKeywordsResponse);
+            let sunElement5 = $("<div class='col-sm-2'>").append(sunKeywords);
+            $(sunRow).append(sunElement5);
+            $(".horoscope-info").append(sunRow); 
+            //.append(sunKeywords);
+            // cardinality
+            let sunCardinality = $("<div class='sunCardinality'>").text("Cardinality: " + sunCardinalityResponse);
+            let sunElement6 = $("<div class='col-sm-2'>").append(sunCardinality);
+            $(sunRow).append(sunElement6);
+            $(".horoscope-info").append(sunRow); 
+            //.append(sunCardinality);
             // sun_dates
-            let sunSunDatesResponse = response[i].sun_dates;
-
-            let sunSunDates = $("<div>").text("SunDates: " + sunSunDatesResponse);
-            westernHoroscope.append(sunSunDates);
-
+            let sunSunDates = $("<div class='sunSunDates'>").text("SunDates: " + sunSunDatesResponse);
+            let sunElement7 = $("<div class='col-sm-2'>").append(sunSunDates);
+            $(sunRow).append(sunElement7);
+            $(".horoscope-info").append(sunRow); 
+            //.append(sunSunDates);
             // elements
-            let sunElementsResponse = response[i].element;
-
-            let sunElements = $("<div>").text("Elements: " + sunElementsResponse);
-            westernHoroscope.append(sunElements);
+            let sunElements = $("<div class='sunElements'>").text("Elements: " + sunElementsResponse);
+            let sunElement8 = $("<div class='col-sm-2'>").append(sunElements);
+            $(sunRow).append(sunElement8);
+            $(".horoscope-info").append(sunRow); 
+            //.append(sunElements);                        
+            // name of famous people
+            let sunFame = $("<div class='sunFame'>").text("Famouse People: " + sunFameResponse);
+            let sunElement9 = $("<div class='col-sm-2'>").append(sunFame);
+            $(sunRow).append(sunElement9);
+            $(".horoscope-info").append(sunRow); 
         }
-
     });
-
 };
 
 // function for risingSigns

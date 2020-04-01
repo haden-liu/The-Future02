@@ -57,7 +57,6 @@ button {
 }    
 
 /* Setting stle for the Tarot card container */
-
 .tarot-info h3{
     text-align: center;    
 }
@@ -83,15 +82,22 @@ button {
     border: #1e310a;
     border-radius: 1px;
     border-style: solid;
-
 }
-/* Setting style for the Astrology App */
-.astrology-section {
+
+/* Setting style for the Horoscope  */
+
+.horoscope-info {
+    border: 20px;
+    border-color:#d8279e;
+    background-color: grey;
+    border-style: groove;
+    margin: 5px;
+    color: antiquewhite;
+}
+
+.sunName {
     text-align: center;
+    border: #1e310a;
+    border-radius: 1px;
+    border-style: solid;
 }
-
-/* Setting style for the Western Horoscope  */
-.western-section {
-    text-align: center;
-}
-
