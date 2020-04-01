@@ -22,7 +22,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
         <!-- Optional JavaScript -->
         <script src="assets/script.js" defer></script>
-        <script src="assets/western-horoscope.js" defer></script>
+        <script src="assets/horoscope.js" defer></script>
         <script src="assets/tarot.js" defer></script>
     </head>
     <body>
@@ -42,12 +42,12 @@
                     </div>
                     <!-- Section for the buttons --> 
                     <form class="formInput">
-                    <div class="buttons">
                         <label for="MMDD">Enter your Month and Day of birth:</label>
-                        <input type="text" id="MMDD" placeholder="Month-Day">
-                        <button class="btn btn-dark tarotBtn">Tarot</button>
-                        <button class="btn btn-dark horoscopeBtn">Horoscope</button>
-                    </div>
+                        <input type="date" id="MMDD" placeholder="Month-Day">
+                        <div class="buttons">
+                            <button class="btn btn-dark tarotBtn">Tarot</button>
+                            <button class="btn btn-dark horoscopeBtn">Horoscope</button>
+                        </div>
                     </form>    
                 </div>
             </div>    
