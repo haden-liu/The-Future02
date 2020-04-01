@@ -7,14 +7,11 @@ const apis = {
     // returns name and its emotional traits
     moonSigns: "https://zodiacal.herokuapp.com/moon",
 
-    // // returns all 4 elements
-    // elements: "https://zodiacal.herokuapp.com/elements",
-    // // returns all 3 cardinalities (modality)
-    // cardinity: "https://zodiacal.herokuapp.com/cardinalities",
 }
 
 $(".westernBtn").on("click", function(){
-    displaySun()
+    event.preventDefault();
+    displaySun();
 });
 
 // function for sunSigns
