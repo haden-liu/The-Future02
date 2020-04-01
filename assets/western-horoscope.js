@@ -87,20 +87,17 @@ function displaySun() {
             westernHoroscope.append(sunElements);
         }
 // function for moonSigns
-function displayMoon() {
-    $.ajax({
-        url: apis.moonSigns,
-        
-        method: "GET"
-    })
-    .then(function(response) {
-        //console.log(response[0].rising_physical)
-        //console.log(response[0].famous_people)
-        //console.log(response)
-
-        
-
-        
-    });
-
+    function displayMoon() {
+        $.ajax({
+            url: apis.moonSigns,
+            
+            method: "GET"
+        })
+        .then(function(response) {
+            //console.log(response[0].rising_physical)
+            //console.log(response[0].famous_people)
+            //console.log(response)    
+        })
+    }
+})
 }
