@@ -1,5 +1,8 @@
 $(".tarotBtn").on("click", function(){
+    $(".horoscope-info").empty();
+    $(".tarot-info").empty();
     event.preventDefault();
+    event.stopPropagation();
     displayTarot()
 });
 
@@ -14,6 +17,7 @@ function displayTarot() {
         method: "GET"
     })
     .then(function(response) {
+
         for (i = 0; i < response.cards.length; i++) {
             // the whole information on tarot
             let tarotInfor = [];
@@ -48,3 +52,4 @@ function displayTarot() {
         }
     });
 }
+

@@ -92,7 +92,7 @@ button {
     border-style: solid;
 }
 
-.horoscope-info {
+.horoscope-row {
     border: 20px;
     border-color:#d8279e;
     background-color: grey;
@@ -109,4 +109,34 @@ button {
 
 .sunshine1 {
     text-align: left;
+}
+
+.sunGoodTraits ,.sunBadTraits {
+    background-color: cadetblue;
+}
+
+.sunMentalTraits,.sunPhysicalTraits {
+    background-color: cornflowerblue;
+}
+
+.sunKeyword,.sunCardinality,.sunSunDates,.sunElements{
+    background-color: blueviolet;
+}
+.sunFame {
+    background-color: antiquewhite;
+    color: black;
+}
+
+.moonRow {
+    border: #1e310a;
+    border-radius: 1px;
+    border-style: solid;
+}
+
+.moony {
+    background-color: darkcyan;
+}
+.moonyMore {
+    background-color: antiquewhite;
+    color: darkcyan ;
 }
