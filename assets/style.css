@@ -85,6 +85,12 @@ button {
 }
 
 /* Setting style for the Horoscope  */
+.horoscope-row {
+    
+    border: #1e310a;
+    border-radius: 1px;
+    border-style: solid;
+}
 
 .horoscope-info {
     border: 20px;
@@ -94,10 +100,13 @@ button {
     margin: 5px;
     color: antiquewhite;
 }
-
-.sunName {
+.sunshine {
     text-align: center;
-    border: #1e310a;
-    border-radius: 1px;
-    border-style: solid;
+    font-size: 22px;
+    color: #1e310a;
+    font-weight: 600;
+}
+
+.sunshine1 {
+    text-align: left;
 }
