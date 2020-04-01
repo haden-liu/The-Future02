@@ -86,18 +86,59 @@ function displaySun() {
             let sunElements = $("<div>").text("Elements: " + sunElementsResponse);
             westernHoroscope.append(sunElements);
         }
+
+    });
+
+};
+
+// function for risingSigns
+function displayRising() {
+    $.ajax({
+        url: apis.risingSigns,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+
+        for (i = 0; i < response.length; i++) {
+            // the whole information on western horoscope
+            let westernHoroscope = $(".western-Horoscope");
+
+            // names of rising signs
+            let risingNameResponse = response[i].rising_name;
+
+            let risingName = $("<div>").text("Sign Name: " + risingNameResponse);
+            westernHoroscope.append(risingName);
+
+
+        }
+    });
+
+};
+// // displayRising()  
+
+
 // function for moonSigns
-    function displayMoon() {
-        $.ajax({
-            url: apis.moonSigns,
-            
-            method: "GET"
-        })
-        .then(function(response) {
-            //console.log(response[0].rising_physical)
-            //console.log(response[0].famous_people)
-            //console.log(response)    
-        })
-    }
-})
-}
+function displayMoon() {
+    $.ajax({
+        url: apis.moonSigns,
+        
+        method: "GET"
+    })
+    .then(function(response) {
+
+        for (i = 0; i < response.length; i++) {
+            // the whole information on western horoscope
+            let westernHoroscope = $(".western-Horoscope");
+
+            // names of moon signs
+            let moonNameResponse = response[i].rising_name;
+
+            let moonName = $("<div>").text("Sign Name: " + moonNameResponse);
+            westernHoroscope.append(moonName);
+
+
+        }
+    });
+};
+// displayMoon()  
