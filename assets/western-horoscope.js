@@ -45,7 +45,7 @@ function displaySun() {
             let sunRow = $("<div class='row horoscope-row'>");
 
             let sunName = $("<div class='sunName '>").text(sunNameResponse);
-            let sunElement = $("<div class='col-sm-2 sunshine'>").append(sunName);
+            let sunElement = $("<div class='sunshine'>").append(sunName);
             $(sunRow).append(sunElement);
             $(".horoscope-info").append(sunRow);
             // good_traits
@@ -71,7 +71,7 @@ function displaySun() {
             $(".horoscope-info").append(sunRow); 
             //.append(sunPhysicalTraits);
             // keywords
-            let sunKeywords = $("<div class='sunKeyword'>").html("Keywords: " + sunKeywordsResponse);
+            let sunKeywords = $("<div class='sunKeyword'>").html("Keywords: " + "<br>" + sunKeywordsResponse);
             let sunElement5 = $("<div class='sunshine5'>").append(sunKeywords);
             $(sunRow).append(sunElement5);
             $(".horoscope-info").append(sunRow); 
@@ -83,7 +83,7 @@ function displaySun() {
             $(".horoscope-info").append(sunRow); 
             //.append(sunCardinality);
             // sun_dates
-            let sunSunDates = $("<div class='sunSunDates'>").html("SunDates: " + sunSunDatesResponse);
+            let sunSunDates = $("<div class='sunSunDates'>").html("<br>" + "SunDates:" + sunSunDatesResponse);
             let sunElement7 = $("<div class='sunshine7'>").append(sunSunDates);
             $(sunRow).append(sunElement7);
             $(".horoscope-info").append(sunRow); 
@@ -95,7 +95,7 @@ function displaySun() {
             $(".horoscope-info").append(sunRow); 
             //.append(sunElements);                        
             // name of famous people
-            let sunFame = $("<div class='sunFame'>").html("Famouse People: " + "<br>" + sunFameResponse);
+            let sunFame = $("<div class='sunFame'>").html("Famouse People: " + "<br>"+ sunFameResponse);
             let sunElement9 = $("<div class='sunshine9'>").append(sunFame);
             $(sunRow).append(sunElement9);
             $(".horoscope-info").append(sunRow); 

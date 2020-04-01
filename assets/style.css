@@ -121,6 +121,7 @@ button {
 
 .sunKeyword,.sunCardinality,.sunSunDates,.sunElements{
     background-color: blueviolet;
+    align-items: center;
 }
 .sunFame {
     background-color: antiquewhite;
@@ -143,4 +144,8 @@ button {
 
 footer {
     color: antiquewhite;
+}
+
+.formInput {
+    background-color: #d8279e;
 }
