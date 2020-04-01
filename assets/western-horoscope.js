@@ -12,6 +12,7 @@ const apis = {
 $(".horoscopeBtn").on("click", function(){
     event.preventDefault();
     displaySun();
+    displayMoon();
 });
 
 // function for sunSigns
@@ -99,33 +100,6 @@ function displaySun() {
     });
 };
 
-// function for risingSigns
-function displayRising() {
-    $.ajax({
-        url: apis.risingSigns,
-        
-        method: "GET"
-    })
-    .then(function(response) {
-
-        for (i = 0; i < response.length; i++) {
-            // the whole information on western horoscope
-            let westernHoroscope = $(".western-Horoscope");
-
-            // names of rising signs
-            let risingNameResponse = response[i].rising_name;
-
-            let risingName = $("<div>").text("Sign Name: " + risingNameResponse);
-            westernHoroscope.append(risingName);
-
-
-        }
-    });
-
-};
-// // displayRising()  
-
-
 // function for moonSigns
 function displayMoon() {
     $.ajax({
@@ -136,17 +110,23 @@ function displayMoon() {
     .then(function(response) {
 
         for (i = 0; i < response.length; i++) {
-            // the whole information on western horoscope
-            let westernHoroscope = $(".western-Horoscope");
+            let moonNameResponse = response[i].moon_name;
+            let moonContentsResponse = response[i].moon_contents;
+            // information on horoscope
+            let moonRow = $("<div class='row horoscope-row'>");
 
-            // names of moon signs
-            let moonNameResponse = response[i].rising_name;
+            let moonName = $("<div class='col-sm-2'>").text("Moon Name: " + moonNameResponse);
+            let moonElement = $("<div class='col-sm-2'>").append(moonName);
+            $(moonRow).append(moonElement);
+            $(".horoscope-info").append(moonRow);
 
-            let moonName = $("<div>").text("Sign Name: " + moonNameResponse);
-            westernHoroscope.append(moonName);
+            let moonContents = $("<div class='col-sm-2'>").text("Moon Description: " + moonContentsResponse);
+            let moonElement1 = $("<div class='col-sm-2'>").append(moonContents);
+            $(moonRow).append(moonElement1);
+            $(".horoscope-info").append(moonRow);
 
 
         }
     });
 };
-// displayMoon()  
+
