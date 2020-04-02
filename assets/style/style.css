@@ -5,12 +5,11 @@
 }
 
 .container {
-    background-image: url(./cynthia.jpeg);
-    
+    background-image: url(../images/cynthia.jpeg); 
 }
 
 body {
-    background-image: url(./speed.jpeg);
+    background-image: url(../images/speed.jpeg);
 }
 /* Setting style for the header */
 header {
@@ -22,7 +21,7 @@ header {
     text-shadow: 3px 3px aquamarine;
     font-family: fantasy, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    background-image: url(./cynthia.jpeg);
+    background-image: url(../images/cynthia.jpeg);
     border-image-width: 100%;
     margin-bottom: 20px;
 }
@@ -58,7 +57,7 @@ button {
     text-align: center;
     text-emphasis: none;
     letter-spacing: 2px;
-    background-image: url(./cynthia.jpeg);
+    background-image: url(../images/cynthia.jpeg);
     color:darkmagenta;
     text-shadow: 1px 1px white;
 
