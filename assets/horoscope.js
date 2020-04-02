@@ -31,7 +31,6 @@ function displaySun() {
             let sunMentalTraitsResponse = response[i].mental_traits;
             let sunCardinalityResponse = response[i].cardinality;
 
-            //console.log(sunNameResponse)
             // render on DOM
             let sunRow = $("<div class='row horoscope-row'>");
             // name of horoscope
@@ -59,15 +58,15 @@ function displaySun() {
             let sunElement5 = $("<div class='sunshine5'>").append(sunKeywords);
  
             // cardinality
-            let sunCardinality = $("<div class='sunCardinality'>").html("Cardinality: " + sunCardinalityResponse);
+            let sunCardinality = $("<div class='sunCardinality'>").html("Cardinality: " + sunCardinalityResponse  + "<br>");
             let sunElement6 = $("<div class='sunshine6'>").append(sunCardinality);
 
             // sun_dates
-            let sunSunDates = $("<div class='sunSunDates'>").html("SunDates: " + "<br>" + sunSunDatesResponse);
+            let sunSunDates = $("<div class='sunSunDates'>").html("SunDates: " + "<br>" + sunSunDatesResponse  + "<br>");
             let sunElement7 = $("<div class='sunshine7'>").append(sunSunDates);
 
             // elements
-            let sunElements = $("<div class='sunElements'>").html("Elements: " + sunElementsResponse);
+            let sunElements = $("<div class='sunElements'>").html("Elements: " + sunElementsResponse  + "<br>");
             let sunElement8 = $("<div class='sunshine8'>").append(sunElements);
                      
             // name of famous people
