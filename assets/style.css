@@ -156,3 +156,7 @@ footer {
 .formInput {
     background-color: #d8279e;
 }
+
+.hidden {
+    display: none;
+}
