@@ -10,14 +10,14 @@ const apis = {
 }
 
 // function for sunSigns
-function displaySun() {
+function displaySun(i) {
     $.ajax({
         url: apis.sunSigns,
         method: "GET"
     })
     .then(function(response) {
-        
-        for (i = 0; i < response.length; i++) {
+        console.log(response)
+        //for (i = 0; i < response.length; i++) {
           
             // declaration of variables
             let sunNameResponse = response[i].name;
@@ -75,20 +75,20 @@ function displaySun() {
             
             $(sunRow).append(sunElement,sunElement1,sunElement2,sunElement3,sunElement4,sunElement5,sunElement6,sunElement7,sunElement8,sunElement9);
             $(".horoscope-info").append(sunRow); 
-        }
+        //}
     });
 }
 
 // function for moonSigns
-function displayMoon() {
+function displayMoon(i) {
     $.ajax({
         url: apis.moonSigns,
         
         method: "GET"
     })
     .then(function(response) {
-
-        for (i = 0; i < response.length; i++) {
+        console.log(response)
+        //for (i = 0; i < response.length; i++) {
             let moonNameResponse = response[i].moon_name;
             let moonContentsResponse = response[i].moon_contents;
             // information on horoscope
@@ -102,7 +102,7 @@ function displayMoon() {
             
             $(moonRow).append(moonElement,moonElement1);
             $(".horoscope-info").append(moonRow);
-        }
+        //}
     });
 }
 
@@ -111,7 +111,14 @@ $(".horoscopeBtn").on("click", function(){
     $(".tarot-info").empty();
     event.preventDefault();
     event.stopPropagation();
-    displaySun();
-    displayMoon();
+    // 
+    let selectedDate = $("#MMDD").val();
+    if (selectedDate != ""){
+        calculatingHoroscope(selectedDate);
+    }
+    else
+    {
+        $("#errorDate").show();
+    }
 });
 
