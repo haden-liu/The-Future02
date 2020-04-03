@@ -12,7 +12,10 @@ As a user, I want to see Horoscope when I enter my year of birth and I click on 
 As a user, when I click on Tarot, I am presented with 3 cards, that will be random everytime I click on them.
 
 ### API
-<li>Horoscope - 
+<li>Horoscope - https://zodiacal.herokuapp.com/api
+                https://zodiacal.herokuapp.com/rising
+                https://zodiacal.herokuapp.com/moon
+
 
 <li>Tarot - https://github.com/ekelen/tarot-api
             https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=10   
