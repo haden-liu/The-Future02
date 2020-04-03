@@ -43,5 +43,9 @@ John Merchan, Cynthia and Haden-Liu
 
 
 
-### Licenced
+### Licence
+<p>
+This project is licensed under the MIT License - see the <a href="/LICENCE.md">Link to the LICENCE</a> file for details
+</p>
+
 
