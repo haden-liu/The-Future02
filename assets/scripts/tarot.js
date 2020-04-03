@@ -1,15 +1,6 @@
-$(".tarotBtn").on("click", function(){
-    $(".horoscope-info").empty();
-    $(".tarot-info").empty();
-    event.preventDefault();
-    event.stopPropagation();
-    displayTarot()
-});
-
+// function that retrieves the Tarot information
 function displayTarot() {
-
-    // var numberOfCards = "";
-    // var queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=" + numberOfCards;
+   
     let queryURL = "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=3";
 
     $.ajax({
@@ -53,3 +44,10 @@ function displayTarot() {
     });
 }
 
+$(".tarotBtn").on("click", function(){
+    $(".horoscope-info").empty();
+    $(".tarot-info").empty();
+    event.preventDefault();
+    event.stopPropagation();
+    displayTarot()
+});

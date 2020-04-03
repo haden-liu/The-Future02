@@ -1,6 +1,4 @@
 
-
-
 // function calulating the correct horoscope
 function calculatingHoroscope (date) {
     let selectedDate = moment(date);
@@ -70,8 +68,6 @@ function calculatingHoroscope (date) {
         displaySun(11);
     }
 }
-
-
 
 // moment.js current time function
 const intervalTime = setInterval (function(){ 

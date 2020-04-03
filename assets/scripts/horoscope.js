@@ -114,6 +114,7 @@ $(".horoscopeBtn").on("click", function(){
     // 
     let selectedDate = $("#MMDD").val();
     if (selectedDate != ""){
+        $("#errorDate").empty();
         calculatingHoroscope(selectedDate);
     }
     else
