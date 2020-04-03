@@ -37,10 +37,8 @@ https://johnnyboysydney.github.io/The-Future/.
 ![Capture1](https://user-images.githubusercontent.com/54227198/78411434-5ba71700-765b-11ea-9f99-75aec60f3747.JPG)
 
 
-
 ### Contribuitors
-John Merchan, Cynthia and Haden-Liu
-
+John Merchan, Cynthia Zhou and Haden-Liu.
 
 
 ### Licence
