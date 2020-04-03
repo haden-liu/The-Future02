@@ -20,6 +20,12 @@ As a user, when I click on Tarot, I am presented with 3 cards, that will be rand
 <li>Tarot - https://github.com/ekelen/tarot-api
             https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=10   
 
+## Built With
+
+* [VScode](https://code.visualstudio.com/) - The editor of choice
+* [Notepad++](https://notepad-plus-plus.org/) - My second editor
+* [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
+
 
 ### Link to the app
 https://johnnyboysydney.github.io/The-Future/.
