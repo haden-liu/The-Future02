@@ -18,3 +18,17 @@ As a user, when I click on Tarot, I am presented with 3 cards, that will be rand
             https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=10   
 
 
+### Link to the app
+https://johnnyboysydney.github.io/The-Future/.
+
+
+### Screenshots
+
+
+
+### Contribuitors
+John Merchan, Cynthia and Haden-Liu
+
+
+
+### Licenced
