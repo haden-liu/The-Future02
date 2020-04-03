@@ -117,6 +117,10 @@ button {
     text-align: left!important;
 }
 
+.sunshine5, .sunshine6, .sunshine7, .sunshine8 {
+    background-color: blueviolet;
+}
+
 .sunGoodTraits ,.sunBadTraits {
     background-color: cadetblue;
 }
@@ -155,6 +159,10 @@ footer {
 
 .formInput {
     background-color: #d8279e;
+    background-color: #d8279e;
+    width: 30.15cm;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .hidden {

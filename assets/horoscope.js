@@ -58,7 +58,7 @@ function displaySun(i) {
             let sunElement5 = $("<div class='sunshine5'>").append(sunKeywords);
  
             // cardinality
-            let sunCardinality = $("<div class='sunCardinality'>").html("Cardinality: " + sunCardinalityResponse  + "<br>");
+            let sunCardinality = $("<div class='sunCardinality'>").html("Cardinality: " + "<br>" + sunCardinalityResponse);
             let sunElement6 = $("<div class='sunshine6'>").append(sunCardinality);
 
             // sun_dates
@@ -66,7 +66,7 @@ function displaySun(i) {
             let sunElement7 = $("<div class='sunshine7'>").append(sunSunDates);
 
             // elements
-            let sunElements = $("<div class='sunElements'>").html("Elements: " + sunElementsResponse  + "<br>");
+            let sunElements = $("<div class='sunElements'>").html("Elements: " + "<br>" + sunElementsResponse);
             let sunElement8 = $("<div class='sunshine8'>").append(sunElements);
                      
             // name of famous people
