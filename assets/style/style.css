@@ -157,9 +157,9 @@ footer {
 }
 
 .formInput {
+    margin: auto;
     background-color: #d8279e;
-    background-color: #d8279e;
-    width: 30.15cm;
+    /*width: 30.15cm;*/
     text-align: center;
     padding-top: 10px;
 }
